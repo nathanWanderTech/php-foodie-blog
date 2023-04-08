@@ -10,7 +10,7 @@
                 <div class="col-lg-8 col-md-10 order-md-2 order-3">
                     <nav class="header__menu">
                         <ul>
-                            <li class="active"><a href="./index.html">Home</a></li>
+                            <li class="active"><a href="{{ url('') }}">Home</a></li>
                             <li><a href="#">Recipes</a></li>
                             <li><a href="#">Dinner</a></li>
                         </ul>
@@ -29,7 +29,7 @@
             </div>
             <div class="col-lg-6 col-md-6">
                 <div class="header__logo">
-                    <a href="./index.html"><img src="img/logo.png" alt=""></a>
+{{--                    <a href="./index.html"><img src="{{asset('images/logo.png')}}" alt=""></a>--}}
                 </div>
             </div>
             <div class="col-lg-3 col-md-3">
