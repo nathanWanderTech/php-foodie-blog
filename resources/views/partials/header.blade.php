@@ -29,7 +29,7 @@
             </div>
             <div class="col-lg-6 col-md-6">
                 <div class="header__logo">
-{{--                    <a href="./index.html"><img src="{{asset('images/logo.png')}}" alt=""></a>--}}
+                    <a href="{{ url('') }}"><h4>PHP Foodie</h4></a>
                 </div>
             </div>
             <div class="col-lg-3 col-md-3">

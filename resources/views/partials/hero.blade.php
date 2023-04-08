@@ -14,7 +14,6 @@
                                 <div class="hero__inside__item--text">
                                     <ul class="label">
                                         <li>Vegan</li>
-                                        <li>Desserts</li>
                                     </ul>
                                     <h4>Vegan White Peach Mug Cobbler With CardamomVegan<br /> White Peach Mug
                                         Cobbler With Cardamom</h4>
@@ -38,7 +37,6 @@
                                 <div class="hero__inside__item--text">
                                     <ul class="label">
                                         <li>Vegan</li>
-                                        <li>Desserts</li>
                                     </ul>
                                     <h5>How to Make a Milkshake With Any <br />Ice Cream, Any Toppings...</h5>
                                 </div>
@@ -54,7 +52,6 @@
                                 <div class="hero__inside__item--text">
                                     <ul class="label">
                                         <li>Vegan</li>
-                                        <li>Desserts</li>
                                     </ul>
                                     <h5>Vintage Copper Preserve Pan with <br />Brass Handles, Mid 19th Century</h5>
                                 </div>
@@ -71,7 +68,6 @@
                                 <div class="hero__inside__item--text">
                                     <ul class="label">
                                         <li>Vegan</li>
-                                        <li>Desserts</li>
                                     </ul>
                                     <h5>Marinated Lentil Salad with Zucch <br />ini and Tomatoes</h5>
                                 </div>
@@ -95,7 +91,6 @@
                                 <div class="hero__inside__item--text">
                                     <ul class="label">
                                         <li>Vegan</li>
-                                        <li>Desserts</li>
                                     </ul>
                                     <h4>Vegan White Peach Mug Cobbler With CardamomVegan<br /> White Peach Mug
                                         Cobbler With Cardamom</h4>
@@ -119,7 +114,6 @@
                                 <div class="hero__inside__item--text">
                                     <ul class="label">
                                         <li>Vegan</li>
-                                        <li>Desserts</li>
                                     </ul>
                                     <h5>How to Make a Milkshake With Any <br />Ice Cream, Any Toppings...</h5>
                                 </div>
@@ -135,7 +129,6 @@
                                 <div class="hero__inside__item--text">
                                     <ul class="label">
                                         <li>Vegan</li>
-                                        <li>Desserts</li>
                                     </ul>
                                     <h5>Vintage Copper Preserve Pan with <br />Brass Handles, Mid 19th Century</h5>
                                 </div>
@@ -152,7 +145,6 @@
                                 <div class="hero__inside__item--text">
                                     <ul class="label">
                                         <li>Vegan</li>
-                                        <li>Desserts</li>
                                     </ul>
                                     <h5>Marinated Lentil Salad with Zucch <br />ini and Tomatoes</h5>
                                 </div>
