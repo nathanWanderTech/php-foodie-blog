@@ -1,1 +1,1 @@
-edit category
+Edit category

@@ -8,7 +8,9 @@
             <li><a href="{{ url('') }}">Home</a></li>
             <li class="dropdown"><a href="{{ url('categories') }}">Categories</a>
                 <ul class="dropdown__menu">
-                    <li><a href="#">Vegan</a></li>
+                    @foreach($categories as $category)
+                        <li><a href="{{ url("categories/$category->id") }}">{{$category->name}}</a></li>
+                    @endforeach
                 </ul>
             </li>
         </ul>
