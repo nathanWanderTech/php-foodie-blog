@@ -31,9 +31,6 @@
                                                 <li>3 min read</li>
                                                 <li>20 Comment</li>
                                             </ul>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                                tempor incididunt dolore magna aliqua. Quis ipsum suspendisse ultrices
-                                                gravida...</p>
                                         </div>
                                     </div>
                                     <div class="categories__post__item">
@@ -127,12 +124,6 @@
                                                 tempor incididunt dolore magna aliqua. Quis ipsum suspendisse ultrices
                                                 gravida...</p>
                                         </div>
-                                    </div>
-                                    <div class="categories__post__item__small">
-                                        <img src="{{ asset('images/categories/categories-post/quote.png') }}" alt="">
-                                        <p>Lorem ipsum dolor amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                            incididunt labore et dolore magna aliqua gravida.</p>
-                                        <div class="posted__by">Elena T.Jaivy</div>
                                     </div>
                                     <div class="categories__post__item">
                                         <div class="categories__post__item__pic smaller__large set-bg"
