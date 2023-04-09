@@ -6,7 +6,11 @@
     <nav class="humberger__menu__nav mobile-menu">
         <ul>
             <li><a href="{{ url('') }}">Home</a></li>
-            <li><a href="#">Recipes</a></li>
+            <li class="dropdown"><a href="{{ url('categories') }}">Categories</a>
+                <ul class="dropdown__menu">
+                    <li><a href="#">Vegan</a></li>
+                </ul>
+            </li>
         </ul>
     </nav>
     <div id="mobile-menu-wrap"></div>

@@ -11,8 +11,12 @@
                     <nav class="header__menu">
                         <ul>
                             <li class="active"><a href="{{ url('') }}">Home</a></li>
-                            <li><a href="#">Recipes</a></li>
-                            <li><a href="#">Dinner</a></li>
+                            <li class="dropdown"><a href="{{ url('categories') }}">Categories</a>
+                                <ul class="dropdown__menu">
+                                    <li><a href="#">Vegan</a></li>
+                                    <li><a href="#">Asian</a></li>
+                                </ul>
+                            </li>
                         </ul>
                     </nav>
                 </div>
