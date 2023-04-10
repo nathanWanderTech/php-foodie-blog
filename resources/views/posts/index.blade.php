@@ -18,7 +18,7 @@
                                     <div class="row">
                                         <div class="col-lg-6 col-md-6">
                                             <div class="categories__post__item__pic set-bg"
-                                                 data-setbg="{{asset($post->thumbnail_photo)}}">
+                                                 data-setbg="{{str_contains($post->thumbnail_photo, "https") ? asset($post->thumbnail_photo) : asset('storage/' . $post->thumbnail_photo)}}">
                                                 <div class="post__meta">
                                                     <h4>{{date('d', strtotime($post->updated_at))}}</h4>
                                                     <span>{{date('M', strtotime($post->updated_at))}}</span>

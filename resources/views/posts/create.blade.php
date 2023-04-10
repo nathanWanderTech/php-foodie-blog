@@ -6,7 +6,7 @@
         </div>
         <div class="col-lg-8 push-lg-4">
             <form role="form" method="POST" action="{{ action([\App\Http\Controllers\PostController::class, 'store'])}}" enctype="multipart/form-data">
-
+                @include('partials.post.createForm', ['buttonName' => 'Create post'])
                 @include('partials.errors')
             </form>
         </div>

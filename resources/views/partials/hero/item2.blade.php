@@ -1,5 +1,5 @@
 <div class="hero__inside__item hero__inside__item--small set-bg"
-     data-setbg={{ asset('images/hero/hero-2.jpg')}}>
+     data-setbg={{ str_contains($post->thumbnail_photo, "https") ? asset($post->thumbnail_photo) : asset('storage/' . $post->thumbnail_photo)}}>
     <div class="hero__inside__item__text">
         <div class="hero__inside__item--meta">
             <span>{{date('d', strtotime($post->updated_at))}}</span>

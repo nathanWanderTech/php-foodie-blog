@@ -1,7 +1,7 @@
 @extends('master')
 @section('content')
     <section class="single-post spad">
-        <div class="single-post__hero set-bg" data-setbg="{{ $post->thumbnail_photo }}"></div>
+        <div class="single-post__hero set-bg" data-setbg="{{ str_contains($post->thumbnail_photo, "https") ? asset($post->thumbnail_photo) : asset('storage/' . $post->thumbnail_photo) }}"></div>
         <div class="container">
             <div class="row d-flex justify-content-center">
                 <div class="col-lg-8">
