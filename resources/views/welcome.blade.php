@@ -1,5 +1,5 @@
 @extends('master')
 
 @section('content')
-    @include('partials.hero')
+    @include('partials.hero.hero', ['posts' => $posts])
 @endsection
