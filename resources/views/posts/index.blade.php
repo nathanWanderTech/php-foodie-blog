@@ -28,12 +28,12 @@
                                         </div>
                                         <div class="col-lg-6 col-md-6">
                                             <div class="categories__post__item__text">
-                                                <span class="post__label">Dinner</span>
-                                                <h3><a href="#">{{$post->title}}</a>
+                                                <span class="post__label">{{$post->category->name}}</span>
+                                                <h3><a href="{{route('posts.show', $post->id)}}">{{$post->title}}</a>
                                                 </h3>
                                                 <ul class="post__widget">
-                                                    <li>by <span>Admin</span></li>
-                                                    <li>3 min read</li>
+                                                    <li>by <span>{{$post->author->name}}</span></li>
+                                                    <li>{{ rand(5, 15) }} min read</li>
                                                     <li>20 Comment</li>
                                                 </ul>
                                                 <p>{{substr($post->content, 0, 100)}}...</p>

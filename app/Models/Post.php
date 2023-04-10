@@ -12,4 +12,12 @@ class Post extends Model
     protected $fillable = ["title", "content"];
 
     protected $table = 'fb_posts';
+
+    public function category () {
+        return $this->belongsTo(Category::class);
+    }
+
+    public function author () {
+        return $this->belongsTo(User::class);
+    }
 }

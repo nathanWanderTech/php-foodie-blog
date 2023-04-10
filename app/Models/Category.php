@@ -15,7 +15,7 @@ class Category extends Model
 
     protected $dates = ['deleted_at']; //Mark this col as a date
 
-//    public function articles () {
-//        return $this->hasMany(Article::class);
-//    }
+    public function posts () {
+        return $this->hasMany(Post::class);
+    }
 }
