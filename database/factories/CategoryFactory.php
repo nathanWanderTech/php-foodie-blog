@@ -17,7 +17,7 @@ class CategoryFactory extends Factory
     public function definition()
     {
         $defaultPhotos = ['cp-1.jpg', 'cp-1.jpg', 'cp-3.jpg', 'cp-4.jpg', 'cp-5.jpg', 'cp-6.jpg', 'cp-7.jpg', 'cp-8.jpg'];
-        $names = ['Italian', 'Indian', 'Mexican', 'Continental', 'Thai', 'Chinese', 'Mughlai'];
+        $names = ['Italian', 'Indian', 'Mexican', 'Continental', 'Thai', 'Chinese', 'Mughlai', 'Japanese', 'Vietnamese', 'Vegan', 'Greek'];
         return [
             //
             'name' => fake()->randomElement($names),
