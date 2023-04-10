@@ -15,15 +15,11 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // \App\Models\User::factory(10)->create();
-
-        // \App\Models\User::factory()->create([
-        //     'name' => 'Test User',
-        //     'email' => 'test@example.com',
-        // ]);
         DB::table('fb_categories')->truncate();
         $this->call(CategorySeeder::class);
         DB::table('fb_posts')->truncate();
         $this->call(PostSeeder::class);
+        DB::table('fb_comments')->truncate();
+        $this->call(CommentSeeder::class);
     }
 }

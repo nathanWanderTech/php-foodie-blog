@@ -47,7 +47,7 @@
                             </div>
                         </div>
                     </div>
-                @include('partials.post.comments')
+                @include('partials.post.comments', ["comments" => $post->comments])
                 @include('partials.post.commentForm')
                 </div>
             </div>
