@@ -30,4 +30,3 @@
     <hr>
     @endforeach
 </div>
-
