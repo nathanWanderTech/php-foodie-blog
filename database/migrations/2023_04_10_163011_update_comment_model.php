@@ -13,12 +13,8 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('fb_comments', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
-            $table->text('content');
-            $table->bigInteger('post_id', false, true);
-            $table->bigInteger('author_id', false, true)->nullable();
+        Schema::table('fb_comments', function (Blueprint $table) {
+            $table->string('name')->nullable();
         });
     }
 

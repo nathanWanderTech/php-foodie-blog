@@ -12,9 +12,12 @@ class CommentController extends Controller
 {
     public function store(CommentRequest $request) {
         $post = Post::findOrFail($request->post_id);
-        $user = User::findOrFail($request->author_id);
+        $user = User::find($request->author_id);
         $comment = new Comment($request->all());
-        $comment->author_id = $user->id;
+        if(isset($user)) {
+            $comment->author_id = $user->id;
+        }
+        $comment->name = $request->name; // Sender name
         $comment->post_id = $post->id;
         $comment->save();
 
