@@ -29,6 +29,9 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('categories');
+        Schema::dropIfExists('fb_categories');
+        Schema::table('fb_categories', function (Blueprint $table) {
+            $table->dropColumn('thumbnail_photo');
+        });
     }
 };

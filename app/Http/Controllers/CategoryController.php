@@ -24,7 +24,14 @@ class CategoryController extends Controller
 
     public function store(CategoryRequest $request) {
         $formData = $request->all();
-        Category::create($formData);
+        $category = new Category($formData);
+        $category->save();
+        // File
+        if ($request->hasFile('thumbnail_photo') && $request->file('thumbnail_photo')->isValid()) {
+            $path = $request->thumbnail_photo->storePublicly('categories', 'public');
+            $category->thumbnail_photo = $path;
+            $category->save();
+        }
         return redirect('categories');
     }
 

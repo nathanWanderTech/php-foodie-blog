@@ -14,7 +14,7 @@
     <div class="form-group row">
         <label class="col-lg-3 col-form-label form-control-label">Upload thumbnail</label>
         <div class="col-lg-9">
-            <input type="file" name="file" accept="image/*"><br>
+            <input type="file" name="thumbnail_photo" accept="image/*"><br>
         </div>
     </div>
     <div class="form-group row">

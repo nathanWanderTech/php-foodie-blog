@@ -18,7 +18,7 @@
                                     <div class="col-lg-6 col-md-6 col-sm-6">
                                         <div class="categories__post__item">
                                             <div class="categories__post__item__pic set-bg"
-                                                 data-setbg="{{ asset("images/categories/categories-post/$category->thumbnail_photo") }}">
+                                                 data-setbg="{{ str_contains($category->thumbnail_photo, "categories/") ? asset('storage/' . $category->thumbnail_photo) : asset("images/categories/categories-post/$category->thumbnail_photo") }}">
                                                 <div class="post__meta">
                                                     <h4>{{date('d', strtotime($category->updated_at))}}</h4>
                                                     <span class="text-uppercase">{{date('M', strtotime($category->updated_at))}}</span>

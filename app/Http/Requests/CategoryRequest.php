@@ -25,7 +25,7 @@ class CategoryRequest extends FormRequest
     {
         return [
             'name' => 'required|min:5|unique:categories,name,'. $this->segment(2),
-            'description' => 'required|min:8'
+            'description' => 'required|min:8',
         ];
     }
 }
