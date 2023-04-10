@@ -1,6 +1,5 @@
 @extends('master')
 @section('content')
-    <!-- Categories Section Begin -->
     <section class="categories categories-grid spad">
         <div class="categories__post">
             <div class="container">
@@ -60,19 +59,18 @@
                         </div>
                         <div class="col-lg-4 col-md-4">
                             <div class="sidebar__item">
-                                <div class="sidebar__item__banner">
-                                    <img src="img/sidebar/banner.jpg" alt="">
-                                </div>
                                 <div class="sidebar__item__categories">
                                     <div class="sidebar__item__title">
                                         <h6>Categories</h6>
                                     </div>
                                     <ul>
-                                        {{--                                        <li><a href="#">Recipes <span>128</span></a></li>--}}
                                         @foreach($categories as $category)
                                             <li><a href="{{ url("categories/$category->id") }}">{{$category->name}}</a></li>
                                         @endforeach
                                     </ul>
+                                </div>
+                                <div class="sidebar__item__banner">
+                                    <img src="{{asset('images/sidebar/banner.jpg')}}" alt="">
                                 </div>
                             </div>
                         </div>
@@ -81,5 +79,4 @@
             </div>
         </div>
     </section>
-    <!-- Categories Section End -->
 @endsection
