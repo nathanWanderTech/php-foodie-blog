@@ -18,6 +18,7 @@
                                     @endforeach
                                 </ul>
                             </li>
+                            <li class="dropdown"><a href="{{ route('posts.index') }}">Posts</a>
                         </ul>
                     </nav>
                 </div>

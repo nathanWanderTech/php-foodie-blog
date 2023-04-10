@@ -23,5 +23,7 @@ class DatabaseSeeder extends Seeder
         // ]);
         DB::table('fb_categories')->truncate();
         $this->call(CategorySeeder::class);
+        DB::table('fb_posts')->truncate();
+        $this->call(PostSeeder::class);
     }
 }

@@ -7,7 +7,7 @@
                     <div class="row">
                         <div class="col-lg-12 col-md-12">
                             <div class="breadcrumb__text">
-                                <h2>Categories</h2>
+                                <h2><span>Categories</span></h2>
                                 <div class="breadcrumb__option">
                                     <a href="{{ url('') }}">Home</a>
                                     <span>Categories</span>

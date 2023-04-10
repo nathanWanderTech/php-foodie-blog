@@ -1,4 +1,4 @@
-@include('master')
+@extends('master')
 <section class="section-404">
     <div class="text-404">
         <h1>404</h1>
