@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use  App\Http\Controllers\CategoryController;
+use  App\Http\Controllers\CommentController;
 use  App\Http\Controllers\PostController;
 use  App\Http\Controllers\HomeController;
 
@@ -20,3 +21,8 @@ Route::get('/', [HomeController::class, 'index']);
 
 Route::resource('categories', CategoryController::class);
 Route::resource('posts', PostController::class);
+
+Route::group(['prefix' => 'comments', "as" => "comments."], function () {
+    Route::post('store', [CommentController::class, 'store'])->name("store");
+    Route::delete('{article}', [CommentController::class, 'destroy'])->name('destroy');
+});

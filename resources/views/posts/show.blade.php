@@ -48,7 +48,7 @@
                         </div>
                     </div>
                 @include('partials.post.comments', ["comments" => $post->comments])
-                @include('partials.post.commentForm')
+                @include('partials.post.commentForm', ["post_id" => $post->id])
                 </div>
             </div>
         </div>
