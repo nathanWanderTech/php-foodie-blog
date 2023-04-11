@@ -5,21 +5,33 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Requests\CategoryRequest;
 use App\Models\Category;
+use Illuminate\Support\Facades\Auth;
 
 class CategoryController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware('auth', ['only' => ['create', 'edit']]);
+    }
+
     public function index () {
+        $currentUser = Auth::user();
         $categories = Category::all();
-        return view('categories.index', compact('categories'));
+        return view('categories.index', compact('categories', 'currentUser'));
     }
 
     public function show($id) {
+        $currentUser = Auth::user();
         $category = Category::find($id);
-        return view('categories.show', compact('category'));
+        $categories = Category::all();
+        return view('categories.show', compact('category', 'categories', 'currentUser'));
     }
 
     public function create() {
-        return view('categories.create');
+        $currentUser = Auth::user();
+        $categories = Category::all();
+        return view('categories.create', compact('categories', 'currentUser'));
     }
 
     public function store(CategoryRequest $request) {

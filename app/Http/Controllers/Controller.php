@@ -6,7 +6,7 @@ use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Routing\Controller as BaseController;
-use App\Models\Category;
+use Illuminate\Support\Facades\Auth;
 
 class Controller extends BaseController
 {
@@ -15,9 +15,11 @@ class Controller extends BaseController
     public function __construct()
     {
         // Load your objects
-        $categories = Category::select(['id', 'name'])->get();
-
+        $currentUser = Auth::user();
         // Make it available to all views by sharing it
-        view()->share('categories', $categories);
+        $data = array(
+            'currentUser' => $currentUser,
+        );
+        view()->share('data', $data);
     }
 }
