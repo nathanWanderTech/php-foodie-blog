@@ -30,6 +30,7 @@ class CategoryController extends Controller
 
     public function create() {
         $currentUser = Auth::user();
+        if($currentUser->email != 'admin@admin.com') return redirect('');
         $categories = Category::all();
         return view('categories.create', compact('categories', 'currentUser'));
     }

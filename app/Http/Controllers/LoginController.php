@@ -29,13 +29,23 @@ class LoginController extends Controller
 
     public function signup(SignupRequest $request)
     {
-        $formData = $request->all();
-        $user = User::create([
-            'name' => trim($formData['name']),
-            'email' => trim($formData['email']),
-            'password' => Hash::make($formData['password'])
-        ]);
+            try {
+                $formData = $request->all();
+                $foundUser = User::where('email', $formData['email'])->first();
 
-        return redirect()->route('home');
+                if($foundUser) {
+                    return redirect()->route('signup', ['error' => 'Email existed']);
+                }
+
+                $user = User::create([
+                    'name' => trim($formData['name']),
+                    'email' => trim($formData['email']),
+                    'password' => Hash::make($formData['password'])
+                ]);
+                Auth::login($user);
+                return redirect('');
+            } catch (\Exception $e) {
+                return redirect()->route('signup', ['error' => 'Something went wrong!']);
+            }
     }
 }

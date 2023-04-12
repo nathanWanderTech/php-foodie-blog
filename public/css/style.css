@@ -3245,4 +3245,9 @@ ol {
         line-height: 100px;
     }
 }
-
+/*-------------*/
+.signup-login-block {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}

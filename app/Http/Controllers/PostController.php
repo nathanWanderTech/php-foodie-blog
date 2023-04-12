@@ -38,8 +38,9 @@ class PostController extends Controller
 
     public function store(PostRequest $request) {
         $category = Category::findOrFail($request->category_id);
-        $post = new Post($request->all());
-        $post->author_id = 1; // Temporary set author_id = 1
+        $formData = $request->all();
+        $post = new Post($formData);
+        $post->author_id = $formData['author_id'];
         $post->category()->associate($category)->save();
         // File
         if ($request->hasFile('thumbnail_photo') && $request->file('thumbnail_photo')->isValid()) {

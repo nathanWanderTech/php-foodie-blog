@@ -4,6 +4,9 @@
         <a href="{{ url('') }}"><img src="{{ asset('images/logo.png') }}" width="70px"></a>
     </div>
     <nav class="humberger__menu__nav mobile-menu">
+       @include('partials.authen.login')
+    </nav>
+    <nav class="humberger__menu__nav mobile-menu">
         <ul>
             <li><a href="{{ url('') }}">Home</a></li>
             <li class="dropdown"><a href="{{ url('categories') }}">Categories</a>

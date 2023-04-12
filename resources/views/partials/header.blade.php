@@ -24,7 +24,9 @@
                 </div>
                 <div class="col-lg-2 col-md-1 col-6 order-md-3 order-2">
                     <div class="header__search">
-                        @include('partials.authen.login')
+                        <nav class="header__menu">
+                            @include('partials.authen.login')
+                        </nav>
                     </div>
                 </div>
             </div>

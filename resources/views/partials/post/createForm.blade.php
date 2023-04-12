@@ -1,4 +1,6 @@
 {{ csrf_field() }}
+<input type="hidden" name="author_id" value="{{$currentUser->id}}">
+
 <div class="form-group row">
     <label class="col-lg-3 col-form-label form-control-label">Post title</label>
     <div class="col-lg-9">
