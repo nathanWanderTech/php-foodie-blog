@@ -33,4 +33,5 @@ Route::group(['prefix' => 'comments', "as" => "comments."], function () {
 Route::group(['prefix' => 'authentication', "as" => "authentication."], function () {
     Route::post('login', [LoginController::class, 'login'])->name("login");
     Route::post('signup', [LoginController::class, 'signup'])->name("signup");
+    Route::get('logout', [LoginController::class, 'logout'])->name('logout');
 });

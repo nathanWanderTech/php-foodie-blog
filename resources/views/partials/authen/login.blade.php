@@ -6,7 +6,7 @@
                         <li><a href="{{ route('categories.create') }}">Create category</a></li>
                     @endif
                     <li><a href="{{ route('posts.create') }}">Create post</a></li>
-                    <li><a href="#">Logout</a></li>
+                    <li><a href="{{ route('authentication.logout') }}">Logout</a></li>
                 </ul>
             </li>
         </ul>

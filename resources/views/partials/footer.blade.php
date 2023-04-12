@@ -37,7 +37,7 @@
             <div class="col-lg-12">
                 <div class="footer__text">
                     <h3>PHP final project Foodie blog</h3>
-                    <p>Welcome to PHP final project foodie blog! Here, people share thoughts and experiences on a wide range of topics, from travel and food to technology and personal development. Through my writing, I hope to inspire and inform others, and foster meaningful conversations on the issues that matter most. Join me on this journey of exploration and discovery, as we navigate the complexities of life and uncover the beauty in the everyday.</p>
+                    <p>Welcome to PHP final project foodie blog! Final PHP project Cong Nha and Monica using Free template from  <a href="https://colorlib.com" target="_blank">Colorlib</a> <i class="fa fa-heart" aria-hidden="true"></i> Here, people share thoughts and experiences on a wide range of topics, from travel and food to technology and personal development. Through my writing, I hope to inspire and inform others, and foster meaningful conversations on the issues that matter most. Join me on this journey of exploration and discovery, as we navigate the complexities of life and uncover the beauty in the everyday.</p>
                     <div class="footer__logo"><a href="#"><img src="{{ asset('images/logo.png') }}" width="70px" alt=""></a></div>
                     <div class="footer__social">
                         <a href="#"><i class="fa fa-facebook"></i></a>
@@ -50,8 +50,8 @@
                 <div class="footer__copyright">
                     <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                         Copyright &copy;
-                        <script>document.write(new Date().getFullYear());</script> All rights reserved | Free template is made with <i
-                            class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                        <script>document.write(new Date().getFullYear());</script> Final PHP project Cong Nha and Monica using Free template from  <a href="https://colorlib.com" target="_blank">Colorlib</a> <i
+                            class="fa fa-heart" aria-hidden="true"></i>
                         <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                     </p>
                 </div>

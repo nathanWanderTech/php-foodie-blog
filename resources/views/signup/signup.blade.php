@@ -3,22 +3,22 @@
     <div class="container">
         <form role="form" method="POST" action="{{ action([\App\Http\Controllers\LoginController::class, 'signup'])}}" enctype="multipart/form-data">
             {{ csrf_field() }}
-            <div class="form-group row">
+            <div class="form-group row required">
                 <label class="col-lg-3 col-form-label form-control-label">Email</label>
                 <div class="col-lg-9">
-                    <input class="form-control" name="email" type="email" value="{{ $email ?? '' }}" />
+                    <input class="form-control" name="email" type="email" value="{{ $email ?? '' }}" required/>
                 </div>
             </div>
-            <div class="form-group row">
+            <div class="form-group row required">
                 <label class="col-lg-3 col-form-label form-control-label">Name</label>
                 <div class="col-lg-9">
-                    <input class="form-control" name="name" type="text" value="{{ $name ?? '' }}" />
+                    <input class="form-control" name="name" type="text" value="{{ $name ?? '' }}" required/>
                 </div>
             </div>
-            <div class="form-group row">
+            <div class="form-group row required">
                 <label class="col-lg-3 col-form-label form-control-label">Password</label>
                 <div class="col-lg-9">
-                    <input class="form-control" name="password" type="password" value="{{ $password ?? '' }}" />
+                    <input class="form-control" name="password" type="password" value="{{ $password ?? '' }}" required/>
                 </div>
             </div>
             <div class="form-group row">

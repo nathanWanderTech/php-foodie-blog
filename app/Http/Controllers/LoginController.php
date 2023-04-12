@@ -21,8 +21,7 @@ class LoginController extends Controller
     {
         $credentials = $request->only('email', 'password');
         if (Auth::attempt($credentials)) {
-            // Authentication passed...
-            return redirect('');
+            return redirect(''); // Authentication passed...
         }
         return redirect()->route('login', ['error' => 'Incorrect email or password']);
     }
@@ -31,10 +30,10 @@ class LoginController extends Controller
     {
             try {
                 $formData = $request->all();
-                $foundUser = User::where('email', $formData['email'])->first();
+                $foundUser = User::where('email', trim($formData['email']))->first();
 
-                if($foundUser) {
-                    return redirect()->route('signup', ['error' => 'Email existed']);
+                if($foundUser?->email == trim($formData['email'])) {
+                    return redirect()->route('signup', ['error' => 'Email has been used. Please use other email!']);
                 }
 
                 $user = User::create([
@@ -47,5 +46,10 @@ class LoginController extends Controller
             } catch (\Exception $e) {
                 return redirect()->route('signup', ['error' => 'Something went wrong!']);
             }
+    }
+
+    public function logout() {
+        Auth::logout();
+        return redirect('');
     }
 }

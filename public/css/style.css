@@ -3251,3 +3251,8 @@ ol {
     gap: 10px;
     align-items: center;
 }
+
+.form-group.required .form-control-label:after {
+    content:"*";
+    color:red;
+}
