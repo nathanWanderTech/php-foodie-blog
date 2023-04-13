@@ -36,6 +36,16 @@
                                                     <li>20 Comment</li>
                                                 </ul>
                                                 <p>{{substr($post->content, 0, 100)}}...</p>
+                                                @if(Request::get('filter') == 'my-posts')
+                                                    <div>
+                                                        <form method="POST" action="{{route('posts.destroy', $post)}}">
+                                                            @csrf
+                                                            @method('DELETE')
+                                                            <input type="submit" value="Delete" class="btn btn-danger">
+                                                            <button class="btn btn-outline-info"><a href="{{route('posts.edit', $post->id)}}">Edit</a></button>
+                                                        </form>
+                                                    </div>
+                                                @endif
                                             </div>
                                         </div>
                                     </div>
@@ -43,17 +53,19 @@
                                 @endforeach
                             <div class="row">
                                 <div class="col-lg-12">
-                                    <div class="categories__pagination">
-                                        @if($posts->currentPage() > 1)
-                                            <a href="{{ $posts->url($posts->currentPage() - 1) }}">Back</a>
-                                        @endif
-                                        @for ($i = 1; $i <= $posts->lastPage(); $i++)
-                                            <a href="{{ $posts->url($i) }}">{{ $i }}</a>
-                                        @endfor
-                                        @if($posts->currentPage() < $posts->lastPage())
-                                            <a href="{{ $posts->url($posts->currentPage() + 1) }}">Next</a>
-                                        @endif
-                                    </div>
+                                    @if(Request::get('filter') != 'my-posts')
+                                        <div class="categories__pagination">
+                                            @if($posts->currentPage() > 1)
+                                                <a href="{{ $posts->url($posts->currentPage() - 1) }}">Back</a>
+                                            @endif
+                                            @for ($i = 1; $i <= $posts->lastPage(); $i++)
+                                                <a href="{{ $posts->url($i) }}">{{ $i }}</a>
+                                            @endfor
+                                            @if($posts->currentPage() < $posts->lastPage())
+                                                <a href="{{ $posts->url($posts->currentPage() + 1) }}">Next</a>
+                                            @endif
+                                        </div>
+                                    @endif
                                 </div>
                             </div>
                         </div>

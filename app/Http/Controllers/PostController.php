@@ -16,10 +16,16 @@ class PostController extends Controller
         $this->middleware('auth', ['only' => ['create', 'edit']]);
     }
 
-    public function index () {
+    public function index (Request $request) {
+        $filterValue = $request['filter'];
         $currentUser = Auth::user();
         $categories = Category::all();
-        $posts = Post::orderBy('created_at', 'desc')->paginate(7);
+        if ($filterValue == 'my-posts') {
+            $posts = Post::where('author_id', $currentUser->id)->get();
+        }
+        else {
+            $posts = Post::orderBy('created_at', 'desc')->paginate(7);
+        }
         return view('posts.index', compact('posts', 'categories', 'currentUser'));
     }
 
@@ -51,15 +57,22 @@ class PostController extends Controller
         return redirect('posts');
     }
 
-    public function edit() {
-        return view('posts.edit');
+    public function edit($id) {
+        $currentUser = Auth::user();
+        $categories = Category::all();
+        $post = Post::findOrFail($id);
+        return view('posts.edit', compact('post', 'currentUser', 'categories'));
     }
 
-    public function update() {
+    public function update(PostRequest $request, $post) {
+        $formData = $request->all();
+        $post = Post::findOrFail($post);
+        $post->update($formData);
         return redirect('posts');
     }
 
-    public function destroy () {
+    public function destroy (Post $post) {
+        $post->delete();
         return redirect('posts');
     }
 }
