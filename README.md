@@ -6,10 +6,19 @@ This is Laravel final project of Monica Eda and Cong Nha Le, a foodie blog and u
 
 ## Features
 
+### Authentication
 - User Sign up
 - User Log in
 - User Log out
-- Authenticated user can Create Post
+
+### Category
 - Only Admin can create Categories (email: **admin@admin.com**, password: **asdf1234**)
+
+### Posts
+- Authenticated user can Create Posts.
+- Can see a list of their own posts in My posts.
+- Edit/Delete their Posts.
+
+### Comments
 - All user can comment in posts
 - Unauthenticated user's comment are marked as Anonymous username
