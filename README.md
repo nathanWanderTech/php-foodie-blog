@@ -3,6 +3,7 @@
 
 ## Final project Laravel
 This is Laravel final project of Monica Eda and Cong Nha Le, a foodie blog and using free theme from ColorLib.
+[https://cle.scweb.ca/php-final-project/](https://cle.scweb.ca/php-final-project/)
 
 ## Features
 
@@ -18,7 +19,11 @@ This is Laravel final project of Monica Eda and Cong Nha Le, a foodie blog and u
 - Authenticated user can Create Posts.
 - Can see a list of their own posts in My posts.
 - Edit/Delete their Posts.
+- Pagination
 
 ### Comments
 - All user can comment in posts
 - Unauthenticated user's comment are marked as Anonymous username
+
+### Others
+- Homepage displays latest posts.
